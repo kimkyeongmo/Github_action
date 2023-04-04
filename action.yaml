@@ -5,7 +5,7 @@ inputs:
   num: #variable
     description: 'Enter a number'
     required: true
-    default: "1"
+    default: &quot;1&quot;
 outputs:
   num_squared:
     description: 'Square of the input'
@@ -23,7 +23,7 @@ runs:
     shell: bash
   - name: Pass Inputs to Shell
     run : |
-      echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
+      echo &quot;INPUT_NUM=${{ inputs.num }}&quot; >> $GITHUB_ENV
     shell: bash
   - name: Fetch the number's square
     id: get-square
